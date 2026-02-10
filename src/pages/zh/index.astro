@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslation } from '../../i18n/translations.js';
+
+const lang = 'zh';
+const t = getTranslation(lang);
+---
+
+<BaseLayout 
+  title="Result Tech - Automation & AI Services | RM5,000/month"
+  description="We automate your boring work. AI assistants, automation systems, custom tools. RM5,000/month, cancel anytime."
+  lang={lang}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16 md:py-24">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          {t.hero.badge}
+        </span>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          {t.hero.headline}
+          <span class="gradient-text block">{t.hero.headlineHighlight}</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          {t.hero.subheadline}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="https://wa.me/60175740795?text=TECH" target="_blank" class="btn btn-whatsapp">
+            {t.hero.cta}
+          </a>
+          <a href="#services" class="btn btn-secondary">
+            {t.hero.ctaSecondary}
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+          <div class="stat-card">
+            <div class="stat-value">{t.hero.stat1}</div>
+            <div class="stat-label">{t.hero.stat1Label}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{t.hero.stat2}</div>
+            <div class="stat-label">{t.hero.stat2Label}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{t.hero.stat3}</div>
+            <div class="stat-label">{t.hero.stat3Label}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.problem.title}</h2>
+        <p class="text-xl text-gray-600">{t.problem.subtitle}</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Before -->
+        <div class="comparison-card before">
+          <h3 class="text-xl font-bold mb-4">{t.problem.comparison.before}</h3>
+          <div class="text-3xl font-bold mb-2">{t.problem.comparison.beforePrice}</div>
+          <p class="mb-2">{t.problem.comparison.beforeYear}</p>
+          <p class="text-red-600 font-semibold">❌ {t.problem.comparison.beforeDoes}</p>
+        </div>
+        
+        <!-- After -->
+        <div class="comparison-card after">
+          <h3 class="text-xl font-bold mb-4">{t.problem.comparison.tech}</h3>
+          <div class="text-3xl font-bold mb-2">{t.problem.comparison.techPrice}</div>
+          <p class="mb-2">{t.problem.comparison.techCredits}</p>
+          <p class="font-semibold">✅ {t.problem.comparison.techDoes}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="services" class="section section-alt">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.features.title}</h2>
+        <p class="text-xl text-gray-600">{t.features.subtitle}</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {t.features.list.map((feature) => (
+          <div class="feature-card">
+            <h3 class="text-lg font-bold mb-2 text-blue-600">{feature.title}</h3>
+            <p class="text-gray-600">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- For Who Section -->
+  <section class="section">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">{t.forWho.title}</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Good Fit -->
+        <div class="card border-2 border-green-200">
+          <h3 class="text-xl font-bold mb-2">{t.forWho.yes.title}</h3>
+          <p class="text-gray-600 mb-4">{t.forWho.yes.subtitle}</p>
+          <ul class="space-y-2">
+            {t.forWho.yes.points.map((point) => (
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-1">✓</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <!-- Not For You -->
+        <div class="card border-2 border-gray-200">
+          <h3 class="text-xl font-bold mb-2">{t.forWho.no.title}</h3>
+          <p class="text-gray-600 mb-4">{t.forWho.no.subtitle}</p>
+          <ul class="space-y-2">
+            {t.forWho.no.points.map((point) => (
+              <li class="flex items-start gap-2">
+                <span class="text-gray-400 mt-1">✗</span>
+                <span class="text-gray-600">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section section-alt">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.pricing.title}</h2>
+        <p class="text-xl text-gray-600">{t.pricing.subtitle}</p>
+      </div>
+      
+      <div class="max-w-lg mx-auto">
+        <div class="card border-2 border-blue-500 text-center">
+          <div class="mb-6">
+            <span class="text-5xl font-bold text-blue-600">{t.pricing.price}</span>
+            <span class="text-xl text-gray-500">{t.pricing.perMonth}</span>
+          </div>
+          
+          <p class="font-semibold mb-4">{t.pricing.includes}</p>
+          <ul class="text-left space-y-3 mb-8">
+            {t.pricing.features.map((feature) => (
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500 mt-1">✓</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <a href="https://wa.me/60175740795?text=TECH" target="_blank" class="btn btn-primary w-full">
+            {t.pricing.cta}
+          </a>
+          <p class="text-sm text-gray-500 mt-4">{t.pricing.note}</p>
+        </div>
+        
+        <!-- Comparison with Hiring -->
+        <div class="mt-8 p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-center mb-4">{t.pricing.comparison.title}</h3>
+          <div class="grid grid-cols-2 gap-4 text-center">
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <p class="font-semibold text-gray-600">{t.pricing.comparison.dev}</p>
+              <p class="text-xl font-bold text-gray-800">{t.pricing.comparison.devPrice}</p>
+              <p class="text-sm text-gray-500">{t.pricing.comparison.devExtra}</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg border-2 border-blue-200">
+              <p class="font-semibold text-blue-600">{t.pricing.comparison.us}</p>
+              <p class="text-xl font-bold text-blue-700">{t.pricing.comparison.usPrice}</p>
+              <p class="text-sm text-blue-600">{t.pricing.comparison.usExtra}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">{t.faq.title}</h2>
+      
+      <div class="max-w-2xl mx-auto">
+        {t.faq.questions.map((item) => (
+          <div class="faq-item">
+            <h3 class="font-bold text-lg mb-2">{item.q}</h3>
+            <p class="text-gray-600">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-600 text-white py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.cta.title}</h2>
+      <p class="text-xl text-blue-100 mb-8">{t.cta.subtitle}</p>
+      <a href="https://wa.me/60175740795?text=TECH" target="_blank" class="btn bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
+        {t.cta.button}
+      </a>
+      <p class="text-blue-200 mt-4">{t.cta.phone}</p>
+    </div>
+  </section>
+</BaseLayout>
