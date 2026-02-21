@@ -149,7 +149,7 @@ export const translations = {
       title: 'Ready to Automate?',
       subtitle: 'Try us for a month. Not happy? Just stop.',
       button: 'WhatsApp "TECH" Now',
-      phone: 'Or call: 017-574 0795',
+      phone: 'Or call: 017-503 2281',
     },
     // Footer
     footer: {
@@ -309,7 +309,7 @@ export const translations = {
       title: 'Ready Nak Automate?',
       subtitle: 'Cuba kami sebulan. Tak puas hati? Stop je.',
       button: 'WhatsApp "TECH" Sekarang',
-      phone: 'Atau call: 017-574 0795',
+      phone: 'Atau call: 017-503 2281',
     },
     // Footer
     footer: {
@@ -469,7 +469,7 @@ export const translations = {
       title: '准备好自动化了吗？',
       subtitle: '试用我们一个月。不满意？直接停。',
       button: '立即WhatsApp "TECH"',
-      phone: '或致电：017-574 0795',
+      phone: '或致电：017-503 2281',
     },
     // Footer
     footer: {
